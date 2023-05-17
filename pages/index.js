@@ -1,10 +1,19 @@
 import MainLayout from "/lib/mainLayout.js";
-import { Box } from "@chakra-ui/react";
+import SmallHome from "components/smallHome.js";
+import BigHome from "components/bigHome.js";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  return (
-    <MainLayout>
-      <Box>Calci</Box>
-    </MainLayout>
-  );
+  const [width, setWidth] = useState();
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  return <MainLayout>{width > 450 ? <BigHome /> : <SmallHome />}</MainLayout>;
 }
