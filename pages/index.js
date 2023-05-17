@@ -1,3 +1,10 @@
+import MainLayout from "/lib/mainLayout.js";
+import { Box } from "@chakra-ui/react";
+
 export default function Home() {
-  return <div>Calci</div>;
+  return (
+    <MainLayout>
+      <Box>Calci</Box>
+    </MainLayout>
+  );
 }
