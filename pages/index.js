@@ -5,9 +5,6 @@ import ButtonList from "/lib/buttonList.js";
 import styles from "/styles/home.module.css";
 
 export default function Home() {
-  const setClass = () => {
-    return styles.zero;
-  };
   return (
     <MainLayout>
       <Flex
@@ -23,23 +20,18 @@ export default function Home() {
         <Flex width="100%" mt="10px" ml="15px">
           <ThemeButton />
         </Flex>
-        <Flex
-          bgColor="red"
-          width="100%"
-          flex="1"
-          align="flex-end"
-          justify="flex-end"
-        >
+        <Flex width="100%" flex="1" align="flex-end" justify="flex-end">
           <Box mr="20px" mb="20px" fontSize="45px"></Box>
         </Flex>
-        <Box bgColor="blue" width="100%" flex="2.5">
+        <Box width="100%" flex="2.5">
           {ButtonList.map((button) => {
             return (
-              <Box key={button.text}>
+              <Box key={button.text} className={styles[`${button.class}`]}>
                 <Button
                   onClick={() => {
                     button.func("Hello World");
                   }}
+                  colorScheme={button.scheme}
                 >
                   {button.text}
                 </Button>
