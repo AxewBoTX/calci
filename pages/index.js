@@ -1,8 +1,8 @@
 import { Box, Flex, Button } from "@chakra-ui/react";
-import ThemeButton from "/components/themeButton.js";
-import MainLayout from "/lib/mainLayout.js";
-import ButtonList from "/lib/buttonList.js";
-import styles from "/styles/home.module.css";
+import ThemeButton from "@/components/themeButton.js";
+import MainLayout from "@/lib/mainLayout.js";
+import ButtonList from "@/lib/buttonList.js";
+import { funcClass, miscClass, numberClass } from "@/styles/buttonStyle.js";
 
 export default function Home() {
   return (
@@ -23,21 +23,29 @@ export default function Home() {
         <Flex width="100%" flex="1" align="flex-end" justify="flex-end">
           <Box mr="20px" mb="20px" fontSize="45px"></Box>
         </Flex>
-        <Box width="100%" flex="2.5">
-          {ButtonList.map((button) => {
-            return (
-              <Box key={button.text} className={styles[`${button.class}`]}>
+        <Box
+          width="100%"
+          flex="2.5"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="flex-end"
+          height="100%"
+          gap="20px"
+        >
+          <Flex width="100%" align="center" justify="space-evenly">
+            {ButtonList[0].map((button) => {
+              return (
                 <Button
-                  onClick={() => {
-                    button.func("Hello World");
-                  }}
+                  style={miscClass.baseStyle}
+                  key={button.text}
                   colorScheme={button.scheme}
                 >
                   {button.text}
                 </Button>
-              </Box>
-            );
-          })}
+              );
+            })}
+          </Flex>
         </Box>
       </Flex>
     </MainLayout>
