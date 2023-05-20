@@ -1,15 +1,36 @@
-export const numberClass = {
-  baseStyle: {
+const ButtonStyle = {
+  numberStyle: {
+    fontSize: "26px",
+    width: "18vw",
+    maxWidth: "68px",
+    maxHeight: "68px",
+    height: "18vw",
     borderRadius: "50%",
   },
-};
-export const funcClass = {
-  baseStyle: {
-    backgroundColor: "blue",
+  funcStyle: {
+    fontSize: "26px",
+    width: "18vw",
+    maxWidth: "68px",
+    maxHeight: "68px",
+    height: "18vw",
+    borderRadius: "50%",
+  },
+  miscStyle: {
+    fontSize: "26px",
+    width: "18vw",
+    maxWidth: "68px",
+    maxHeight: "68px",
+    height: "18vw",
+    borderRadius: "50%",
+  },
+  zeroStyle: {
+    fontSize: "26px",
+    width: "42vw",
+    maxWidth: "168px",
+    maxHeight: "68px",
+    height: "18vw",
+    borderRadius: "60px",
   },
 };
-export const miscClass = {
-  baseStyle: {
-    backgroundColor: "black",
-  },
-};
+
+export default ButtonStyle;

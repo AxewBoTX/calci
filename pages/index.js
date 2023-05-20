@@ -2,9 +2,11 @@ import { Box, Flex, Button } from "@chakra-ui/react";
 import ThemeButton from "@/components/themeButton.js";
 import MainLayout from "@/lib/mainLayout.js";
 import ButtonList from "@/lib/buttonList.js";
-import { funcClass, miscClass, numberClass } from "@/styles/buttonStyle.js";
+import ButtonStyle from "@/styles/buttonStyle.js";
+import { useRef } from "react";
 
 export default function Home() {
+  const inputRef = useRef();
   return (
     <MainLayout>
       <Flex
@@ -21,7 +23,9 @@ export default function Home() {
           <ThemeButton />
         </Flex>
         <Flex width="100%" flex="1" align="flex-end" justify="flex-end">
-          <Box mr="20px" mb="20px" fontSize="45px"></Box>
+          <Box mr="20px" fontSize="45px" bgColor="red">
+            Hel
+          </Box>
         </Flex>
         <Box
           width="100%"
@@ -32,14 +36,82 @@ export default function Home() {
           justifyContent="flex-end"
           height="100%"
           gap="20px"
+          mb="20px"
         >
           <Flex width="100%" align="center" justify="space-evenly">
             {ButtonList[0].map((button) => {
               return (
                 <Button
-                  style={miscClass.baseStyle}
+                  style={ButtonStyle[`${button.class}Style`]}
                   key={button.text}
                   colorScheme={button.scheme}
+                  onClick={() => {
+                    button.func(inputRef);
+                  }}
+                >
+                  {button.text}
+                </Button>
+              );
+            })}
+          </Flex>
+          <Flex width="100%" align="center" justify="space-evenly">
+            {ButtonList[1].map((button) => {
+              return (
+                <Button
+                  style={ButtonStyle[`${button.class}Style`]}
+                  key={button.text}
+                  colorScheme={button.scheme}
+                  onClick={() => {
+                    button.func(inputRef);
+                  }}
+                >
+                  {button.text}
+                </Button>
+              );
+            })}
+          </Flex>
+          <Flex width="100%" align="center" justify="space-evenly">
+            {ButtonList[2].map((button) => {
+              return (
+                <Button
+                  style={ButtonStyle[`${button.class}Style`]}
+                  key={button.text}
+                  colorScheme={button.scheme}
+                  onClick={() => {
+                    button.func(inputRef);
+                  }}
+                >
+                  {button.text}
+                </Button>
+              );
+            })}
+          </Flex>
+          <Flex width="100%" align="center" justify="space-evenly">
+            {ButtonList[3].map((button) => {
+              return (
+                <Button
+                  style={ButtonStyle[`${button.class}Style`]}
+                  key={button.text}
+                  colorScheme={button.scheme}
+                  onClick={() => {
+                    button.func(inputRef);
+                  }}
+                >
+                  {button.text}
+                </Button>
+              );
+            })}
+          </Flex>
+          <Flex width="100%" align="center" justify="space-evenly">
+            {ButtonList[4].map((button) => {
+              return (
+                <Button
+                  style={ButtonStyle[`${button.class}Style`]}
+                  key={button.text}
+                  colorScheme={button.scheme}
+                  onClick={() => {
+                    button.func(inputRef);
+                  }}
                 >
                   {button.text}
                 </Button>

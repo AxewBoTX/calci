@@ -10,6 +10,7 @@ function ThemeButton() {
         onClick={toggleColorMode}
         icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
         colorScheme={useColorModeValue("purple", "orange")}
+        size="lg"
       />
     </Box>
   );
