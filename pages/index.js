@@ -3,10 +3,10 @@ import ThemeButton from "@/components/themeButton.js";
 import MainLayout from "@/lib/mainLayout.js";
 import ButtonList from "@/lib/buttonList.js";
 import ButtonStyle from "@/styles/buttonStyle.js";
-import { useRef } from "react";
+import { useState } from "react";
 
 export default function Home() {
-  const inputRef = useRef();
+  const [input, setInput] = useState("");
   return (
     <MainLayout>
       <Flex
@@ -23,8 +23,8 @@ export default function Home() {
           <ThemeButton />
         </Flex>
         <Flex width="100%" flex="1" align="flex-end" justify="flex-end">
-          <Box mr="20px" fontSize="45px" bgColor="red">
-            Hel
+          <Box mr="20px" fontSize="45px">
+            {input}
           </Box>
         </Flex>
         <Box
@@ -46,7 +46,7 @@ export default function Home() {
                   key={button.text}
                   colorScheme={button.scheme}
                   onClick={() => {
-                    button.func(inputRef);
+                    button.func(setInput, input);
                   }}
                 >
                   {button.text}
@@ -62,7 +62,7 @@ export default function Home() {
                   key={button.text}
                   colorScheme={button.scheme}
                   onClick={() => {
-                    button.func(inputRef);
+                    button.func(setInput);
                   }}
                 >
                   {button.text}
@@ -78,7 +78,7 @@ export default function Home() {
                   key={button.text}
                   colorScheme={button.scheme}
                   onClick={() => {
-                    button.func(inputRef);
+                    button.func(setInput);
                   }}
                 >
                   {button.text}
@@ -94,7 +94,7 @@ export default function Home() {
                   key={button.text}
                   colorScheme={button.scheme}
                   onClick={() => {
-                    button.func(inputRef);
+                    button.func(setInput);
                   }}
                 >
                   {button.text}
@@ -110,7 +110,7 @@ export default function Home() {
                   key={button.text}
                   colorScheme={button.scheme}
                   onClick={() => {
-                    button.func(inputRef);
+                    button.func(setInput);
                   }}
                 >
                   {button.text}
