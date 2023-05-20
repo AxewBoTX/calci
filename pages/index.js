@@ -4,9 +4,30 @@ import MainLayout from "@/lib/mainLayout.js";
 import ButtonList from "@/lib/buttonList.js";
 import ButtonStyle from "@/styles/buttonStyle.js";
 import { useState } from "react";
+import * as Mathematics from "mathjs";
 
 export default function Home() {
   const [input, setInput] = useState("");
+  const handleInput = (value) => {
+    setInput(input + value);
+  };
+  const handleClear = () => {
+    setInput("");
+  };
+  const handleCalculate = () => {};
+  const handleEverything = (button) => {
+    switch (button.func) {
+      case "Input":
+        handleInput(button.text);
+        break;
+      case "Clear":
+        handleClear();
+        break;
+      case "Calculate":
+        handleCalculate();
+        break;
+    }
+  };
   return (
     <MainLayout>
       <Flex
@@ -46,7 +67,7 @@ export default function Home() {
                   key={button.text}
                   colorScheme={button.scheme}
                   onClick={() => {
-                    button.func(setInput, input);
+                    handleEverything(button);
                   }}
                 >
                   {button.text}
@@ -62,7 +83,7 @@ export default function Home() {
                   key={button.text}
                   colorScheme={button.scheme}
                   onClick={() => {
-                    button.func(setInput);
+                    handleEverything(button);
                   }}
                 >
                   {button.text}
@@ -78,7 +99,7 @@ export default function Home() {
                   key={button.text}
                   colorScheme={button.scheme}
                   onClick={() => {
-                    button.func(setInput);
+                    handleEverything(button);
                   }}
                 >
                   {button.text}
@@ -94,7 +115,7 @@ export default function Home() {
                   key={button.text}
                   colorScheme={button.scheme}
                   onClick={() => {
-                    button.func(setInput);
+                    handleEverything(button);
                   }}
                 >
                   {button.text}
@@ -110,7 +131,7 @@ export default function Home() {
                   key={button.text}
                   colorScheme={button.scheme}
                   onClick={() => {
-                    button.func(setInput);
+                    handleEverything(button);
                   }}
                 >
                   {button.text}
