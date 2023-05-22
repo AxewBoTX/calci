@@ -4,7 +4,6 @@ import MainLayout from "@/lib/mainLayout.js";
 import ButtonList from "@/lib/buttonList.js";
 import ButtonStyle from "@/styles/buttonStyle.js";
 import { useState } from "react";
-import * as Mathematics from "mathjs";
 
 export default function Home() {
   const [input, setInput] = useState("");
@@ -14,7 +13,9 @@ export default function Home() {
   const handleClear = () => {
     setInput("");
   };
-  const handleCalculate = () => {};
+  const handleCalculate = () => {
+    setInput(eval(input).toString());
+  };
   const handleEverything = (button) => {
     switch (button.func) {
       case "Input":
