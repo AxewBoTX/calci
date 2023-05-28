@@ -1,9 +1,11 @@
 import MainLayout from "/lib/mainLayout.js";
 
-export default function Home() {
+const About = () => {
   return (
     <MainLayout>
-      <div>Calci Website</div>
+      <div>About</div>
     </MainLayout>
   );
-}
+};
+
+export default About;
