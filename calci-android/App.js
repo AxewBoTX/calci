@@ -1,10 +1,11 @@
-import { Text, View, StatusBar } from "react-native";
+import { SafeAreaView, Text, StatusBar } from "react-native";
+import styles from "./lib/styles";
 
 export default function App() {
   return (
-    <View>
-      <Text>Hello World!</Text>
+    <SafeAreaView style={styles.mainContainer}>
       <StatusBar style="auto" />
-    </View>
+      <Text>Hello</Text>
+    </SafeAreaView>
   );
 }
