@@ -1,22 +1,35 @@
 import { StyleSheet } from "react-native";
 
 export const colors = {
-  white: "#fff",
-  black: "#000",
+  dark: {
+    main: "#000",
+  },
+  light: {
+    main: "#fff",
+  },
 };
 
-const styles = StyleSheet.create({
-  mainContainer: {
-    alignItems: "center",
-    bottom: 0,
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    left: 0,
-    position: "fixed",
-    right: 0,
-    top: 0,
-  },
-});
+const styles = {
+  dark: StyleSheet.create({
+    mainContainer: {
+      backgroundColor: colors.dark.main,
+      bottom: 0,
+      left: 0,
+      position: "fixed",
+      right: 0,
+      top: 0,
+    },
+  }),
+  light: StyleSheet.create({
+    mainContainer: {
+      backgroundColor: colors.light.main,
+      bottom: 0,
+      left: 0,
+      position: "fixed",
+      right: 0,
+      top: 0,
+    },
+  }),
+};
 
 export default styles;
