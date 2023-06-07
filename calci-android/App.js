@@ -2,6 +2,7 @@ import { SafeAreaView, View, Text, StatusBar, Button } from "react-native";
 import { useState } from "react";
 import darkStyles from "./styles/darkStyles.js";
 import lightStyles from "./styles/lightStyles.js";
+import Feather from "@expo/vector-icons/Feather";
 
 export default function App() {
   const [colorTheme, setColorTheme] = useState("dark");
@@ -19,7 +20,13 @@ export default function App() {
           style={colorTheme == "dark" ? darkStyles.navbar : lightStyles.navbar}
         >
           <Button
-            title="Theme"
+            title={
+              colorTheme == "dark" ? (
+                <Feather name="sun" size={28} color="white" />
+              ) : (
+                <Feather name="moon" size={28} color="black" />
+              )
+            }
             onPress={() => {
               if (colorTheme == "dark") {
                 setColorTheme("light");
