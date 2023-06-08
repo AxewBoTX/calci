@@ -10,11 +10,8 @@ const darkStyles = StyleSheet.create({
   },
   mainContainer: {
     backgroundColor: colors.dark.main,
-    bottom: 0,
-    left: 0,
-    position: "fixed",
-    right: 0,
-    top: 0,
+    height: "100%",
+    width: "100%",
   },
   navbar: {
     alignItems: "flex-start",
