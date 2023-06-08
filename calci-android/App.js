@@ -1,54 +1,12 @@
-import { SafeAreaView, View, Text, StatusBar, Button } from "react-native";
-import { useState } from "react";
-import darkStyles from "./styles/darkStyles.js";
-import lightStyles from "./styles/lightStyles.js";
-import Feather from "@expo/vector-icons/Feather";
+import { SafeAreaView, StatusBar, Text } from "react-native";
 
-export default function App() {
-  const [colorTheme, setColorTheme] = useState("dark");
+const Home = () => {
   return (
     <SafeAreaView>
-      <StatusBar style="auto" />
-      <View
-        style={
-          colorTheme == "dark"
-            ? darkStyles.mainContainer
-            : lightStyles.mainContainer
-        }
-      >
-        <View
-          style={colorTheme == "dark" ? darkStyles.navbar : lightStyles.navbar}
-        >
-          <Button
-            title={
-              colorTheme == "dark" ? (
-                <Feather name="sun" size={28} color="white" />
-              ) : (
-                <Feather name="moon" size={28} color="black" />
-              )
-            }
-            onPress={() => {
-              if (colorTheme == "dark") {
-                setColorTheme("light");
-              } else if (colorTheme == "light") {
-                setColorTheme("dark");
-              }
-            }}
-          />
-        </View>
-        <View
-          style={
-            colorTheme == "dark" ? darkStyles.inputArea : lightStyles.inputArea
-          }
-        ></View>
-        <View
-          style={
-            colorTheme == "dark"
-              ? darkStyles.buttonArea
-              : lightStyles.buttonArea
-          }
-        ></View>
-      </View>
+      <StatusBar />
+      <Text>Hello World</Text>
     </SafeAreaView>
   );
-}
+};
+
+export default Home;
