@@ -15,9 +15,10 @@ const darkStyles = StyleSheet.create({
   },
   navbar: {
     alignItems: "flex-start",
-    marginLeft: "15px",
-    marginTop: "10px",
+    marginLeft: 15,
+    marginTop: 10,
   },
+  themeButton: {},
 });
 
 export default darkStyles;
