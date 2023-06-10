@@ -5,6 +5,7 @@ const lightStyles = StyleSheet.create({
   buttonArea: {
     flex: 2,
   },
+  funcButton: {},
   inputArea: {
     flex: 1,
   },
@@ -13,12 +14,19 @@ const lightStyles = StyleSheet.create({
     height: "100%",
     width: "100%",
   },
+  miscButton: {},
   navbar: {
     alignItems: "flex-start",
-    marginLeft: 15,
-    marginTop: 10,
+    marginLeft: 7,
+    marginTop: 7,
   },
-  themeButton: {},
+  numberButton: {},
+  themeButton: {
+    backgroundColor: colors.light.themeButtonBg,
+    borderRadius: 7,
+    padding: 5,
+  },
+  zeroButton: {},
 });
 
 export default lightStyles;
