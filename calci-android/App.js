@@ -87,20 +87,36 @@ const Home = () => {
               : lightStyles.buttonArea
           }
         >
-          {ButtonList[0].map((button) => {
-            return (
-              <TouchableOpacity
-                key={button.text}
-                style={
-                  colorTheme == "dark"
-                    ? darkStyles[`${button.class}Button`]
-                    : lightStyles[`${button.class}Button`]
-                }
-              >
-                <Text>{button.text}</Text>
-              </TouchableOpacity>
-            );
-          })}
+          <View
+            style={
+              colorTheme == "dark"
+                ? darkStyles.buttonRow
+                : lightStyles.buttonRow
+            }
+          >
+            {ButtonList[0].map((button) => {
+              return (
+                <TouchableOpacity
+                  key={button.text}
+                  style={
+                    colorTheme == "dark"
+                      ? darkStyles[`${button.class}Button`]
+                      : lightStyles[`${button.class}Button`]
+                  }
+                >
+                  <Text
+                    style={
+                      colorTheme == "dark"
+                        ? darkStyles.buttonText
+                        : lightStyles.buttonText
+                    }
+                  >
+                    {button.text}
+                  </Text>
+                </TouchableOpacity>
+              );
+            })}
+          </View>
         </View>
       </View>
     </SafeAreaView>

@@ -1,9 +1,16 @@
 import { StyleSheet } from "react-native";
 import colors from "./colors.js";
 
-const lightStyles = StyleSheet.create({
+const darkStyles = StyleSheet.create({
   buttonArea: {
     flex: 2,
+  },
+  buttonRow: {
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+  },
+  buttonText: {
+    color: colors.light.text,
   },
   funcButton: {},
   inputArea: {
@@ -29,4 +36,4 @@ const lightStyles = StyleSheet.create({
   zeroButton: {},
 });
 
-export default lightStyles;
+export default darkStyles;

@@ -5,6 +5,13 @@ const darkStyles = StyleSheet.create({
   buttonArea: {
     flex: 2,
   },
+  buttonRow: {
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+  },
+  buttonText: {
+    color: colors.dark.text,
+  },
   funcButton: {},
   inputArea: {
     flex: 1,
