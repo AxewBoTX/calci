@@ -4,6 +4,10 @@ import colors from "./colors.js";
 const darkStyles = StyleSheet.create({
   buttonArea: {
     flex: 2,
+    flexDirection: "column",
+    gap: 20,
+    justifyContent: "flex-end",
+    marginBottom: 20,
   },
   buttonRow: {
     flexDirection: "row",
@@ -11,29 +15,65 @@ const darkStyles = StyleSheet.create({
   },
   buttonText: {
     color: colors.light.text,
+    fontSize: 20,
+    fontWeight: "500",
   },
-  funcButton: {},
+  funcButton: {
+    alignItems: "center",
+    backgroundColor: colors.light.funcBg,
+    borderRadius: 50,
+    height: 65,
+    justifyContent: "center",
+    width: 65,
+  },
   inputArea: {
+    alignItems: "flex-end",
     flex: 1,
+    justifyContent: "flex-end",
+  },
+  inputText: {
+    color: colors.light.text,
+    fontSize: 45,
   },
   mainContainer: {
     backgroundColor: colors.light.main,
     height: "100%",
     width: "100%",
   },
-  miscButton: {},
+  miscButton: {
+    alignItems: "center",
+    backgroundColor: colors.light.miscBg,
+    borderRadius: 50,
+    height: 65,
+    justifyContent: "center",
+    width: 65,
+  },
   navbar: {
     alignItems: "flex-start",
     marginLeft: 7,
     marginTop: 7,
   },
-  numberButton: {},
+  numberButton: {
+    alignItems: "center",
+    backgroundColor: colors.light.numberBg,
+    borderRadius: 50,
+    height: 65,
+    justifyContent: "center",
+    width: 65,
+  },
   themeButton: {
     backgroundColor: colors.light.themeButtonBg,
     borderRadius: 7,
     padding: 5,
   },
-  zeroButton: {},
+  zeroButton: {
+    alignItems: "center",
+    backgroundColor: colors.light.numberBg,
+    borderRadius: 50,
+    height: 65,
+    justifyContent: "center",
+    width: 145,
+  },
 });
 
 export default darkStyles;

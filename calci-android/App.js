@@ -78,7 +78,15 @@ const Home = () => {
             colorTheme == "dark" ? darkStyles.inputArea : lightStyles.inputArea
           }
         >
-          {input}
+          <Text
+            style={
+              colorTheme == "dark"
+                ? darkStyles.inputText
+                : lightStyles.inputText
+            }
+          >
+            {input}
+          </Text>
         </View>
         <View
           style={
@@ -103,6 +111,141 @@ const Home = () => {
                       ? darkStyles[`${button.class}Button`]
                       : lightStyles[`${button.class}Button`]
                   }
+                  onPress={() => {
+                    handleEverything(button);
+                  }}
+                >
+                  <Text
+                    style={
+                      colorTheme == "dark"
+                        ? darkStyles.buttonText
+                        : lightStyles.buttonText
+                    }
+                  >
+                    {button.text}
+                  </Text>
+                </TouchableOpacity>
+              );
+            })}
+          </View>
+          <View
+            style={
+              colorTheme == "dark"
+                ? darkStyles.buttonRow
+                : lightStyles.buttonRow
+            }
+          >
+            {ButtonList[1].map((button) => {
+              return (
+                <TouchableOpacity
+                  key={button.text}
+                  style={
+                    colorTheme == "dark"
+                      ? darkStyles[`${button.class}Button`]
+                      : lightStyles[`${button.class}Button`]
+                  }
+                  onPress={() => {
+                    handleEverything(button);
+                  }}
+                >
+                  <Text
+                    style={
+                      colorTheme == "dark"
+                        ? darkStyles.buttonText
+                        : lightStyles.buttonText
+                    }
+                  >
+                    {button.text}
+                  </Text>
+                </TouchableOpacity>
+              );
+            })}
+          </View>
+          <View
+            style={
+              colorTheme == "dark"
+                ? darkStyles.buttonRow
+                : lightStyles.buttonRow
+            }
+          >
+            {ButtonList[2].map((button) => {
+              return (
+                <TouchableOpacity
+                  key={button.text}
+                  style={
+                    colorTheme == "dark"
+                      ? darkStyles[`${button.class}Button`]
+                      : lightStyles[`${button.class}Button`]
+                  }
+                  onPress={() => {
+                    handleEverything(button);
+                  }}
+                >
+                  <Text
+                    style={
+                      colorTheme == "dark"
+                        ? darkStyles.buttonText
+                        : lightStyles.buttonText
+                    }
+                  >
+                    {button.text}
+                  </Text>
+                </TouchableOpacity>
+              );
+            })}
+          </View>
+          <View
+            style={
+              colorTheme == "dark"
+                ? darkStyles.buttonRow
+                : lightStyles.buttonRow
+            }
+          >
+            {ButtonList[3].map((button) => {
+              return (
+                <TouchableOpacity
+                  key={button.text}
+                  style={
+                    colorTheme == "dark"
+                      ? darkStyles[`${button.class}Button`]
+                      : lightStyles[`${button.class}Button`]
+                  }
+                  onPress={() => {
+                    handleEverything(button);
+                  }}
+                >
+                  <Text
+                    style={
+                      colorTheme == "dark"
+                        ? darkStyles.buttonText
+                        : lightStyles.buttonText
+                    }
+                  >
+                    {button.text}
+                  </Text>
+                </TouchableOpacity>
+              );
+            })}
+          </View>
+          <View
+            style={
+              colorTheme == "dark"
+                ? darkStyles.buttonRow
+                : lightStyles.buttonRow
+            }
+          >
+            {ButtonList[4].map((button) => {
+              return (
+                <TouchableOpacity
+                  key={button.text}
+                  style={
+                    colorTheme == "dark"
+                      ? darkStyles[`${button.class}Button`]
+                      : lightStyles[`${button.class}Button`]
+                  }
+                  onPress={() => {
+                    handleEverything(button);
+                  }}
                 >
                   <Text
                     style={
