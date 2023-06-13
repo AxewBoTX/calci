@@ -81,15 +81,17 @@ const Home = () => {
             colorTheme == "dark" ? darkStyles.inputArea : lightStyles.inputArea
           }
         >
-          <Text
-            style={
-              colorTheme == "dark"
-                ? darkStyles.inputText
-                : lightStyles.inputText
-            }
-          >
-            {input}
-          </Text>
+          <Pressable onPress={handleDelete}>
+            <Text
+              style={
+                colorTheme == "dark"
+                  ? darkStyles.inputText
+                  : lightStyles.inputText
+              }
+            >
+              {input}
+            </Text>
+          </Pressable>
         </View>
         <View
           style={
