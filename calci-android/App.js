@@ -9,6 +9,9 @@ import ButtonList from "./lib/buttonList.js";
 const Home = () => {
   const [colorTheme, setColorTheme] = useState("light");
   const [input, setInput] = useState("");
+  const handleDelete = () => {
+    setInput(input.slice(0, -1));
+  };
   const handleInput = (value) => {
     setInput(input + value);
   };
@@ -65,7 +68,9 @@ const Home = () => {
             <Feather
               name={colorTheme == "dark" ? "sun" : "moon"}
               color={
-                colorTheme == "dark" ? colors.dark.text : colors.light.text
+                colorTheme == "dark"
+                  ? colors.dark.buttonFg
+                  : colors.light.buttonFg
               }
               size={32}
             />

@@ -14,8 +14,8 @@ const darkStyles = StyleSheet.create({
     justifyContent: "space-evenly",
   },
   buttonText: {
-    color: colors.light.text,
-    fontSize: 20,
+    color: colors.light.buttonFg,
+    fontSize: 30,
     fontWeight: "500",
   },
   funcButton: {
@@ -31,6 +31,7 @@ const darkStyles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-end",
     marginBottom: 50,
+    marginRight: 30,
   },
   inputText: {
     color: colors.light.text,
