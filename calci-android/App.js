@@ -1,10 +1,4 @@
-import {
-  View,
-  TouchableOpacity,
-  SafeAreaView,
-  StatusBar,
-  Text,
-} from "react-native";
+import { View, Pressable, SafeAreaView, StatusBar, Text } from "react-native";
 import { useState } from "react";
 import colors from "./styles/colors.js";
 import darkStyles from "./styles/darkStyles.js";
@@ -22,7 +16,11 @@ const Home = () => {
     setInput("");
   };
   const handleCalculate = () => {
-    setInput(eval(input).toString());
+    try {
+      setInput(eval(input).toString());
+    } catch (error) {
+      setInput("Error");
+    }
   };
   const handleEverything = (button) => {
     switch (button.func) {
@@ -50,7 +48,7 @@ const Home = () => {
         <View
           style={colorTheme == "dark" ? darkStyles.navbar : lightStyles.navbar}
         >
-          <TouchableOpacity
+          <Pressable
             style={
               colorTheme == "dark"
                 ? darkStyles.themeButton
@@ -71,7 +69,7 @@ const Home = () => {
               }
               size={32}
             />
-          </TouchableOpacity>
+          </Pressable>
         </View>
         <View
           style={
@@ -104,7 +102,7 @@ const Home = () => {
           >
             {ButtonList[0].map((button) => {
               return (
-                <TouchableOpacity
+                <Pressable
                   key={button.text}
                   style={
                     colorTheme == "dark"
@@ -124,7 +122,7 @@ const Home = () => {
                   >
                     {button.text}
                   </Text>
-                </TouchableOpacity>
+                </Pressable>
               );
             })}
           </View>
@@ -137,7 +135,7 @@ const Home = () => {
           >
             {ButtonList[1].map((button) => {
               return (
-                <TouchableOpacity
+                <Pressable
                   key={button.text}
                   style={
                     colorTheme == "dark"
@@ -157,7 +155,7 @@ const Home = () => {
                   >
                     {button.text}
                   </Text>
-                </TouchableOpacity>
+                </Pressable>
               );
             })}
           </View>
@@ -170,7 +168,7 @@ const Home = () => {
           >
             {ButtonList[2].map((button) => {
               return (
-                <TouchableOpacity
+                <Pressable
                   key={button.text}
                   style={
                     colorTheme == "dark"
@@ -190,7 +188,7 @@ const Home = () => {
                   >
                     {button.text}
                   </Text>
-                </TouchableOpacity>
+                </Pressable>
               );
             })}
           </View>
@@ -203,7 +201,7 @@ const Home = () => {
           >
             {ButtonList[3].map((button) => {
               return (
-                <TouchableOpacity
+                <Pressable
                   key={button.text}
                   style={
                     colorTheme == "dark"
@@ -223,7 +221,7 @@ const Home = () => {
                   >
                     {button.text}
                   </Text>
-                </TouchableOpacity>
+                </Pressable>
               );
             })}
           </View>
@@ -236,7 +234,7 @@ const Home = () => {
           >
             {ButtonList[4].map((button) => {
               return (
-                <TouchableOpacity
+                <Pressable
                   key={button.text}
                   style={
                     colorTheme == "dark"
@@ -256,7 +254,7 @@ const Home = () => {
                   >
                     {button.text}
                   </Text>
-                </TouchableOpacity>
+                </Pressable>
               );
             })}
           </View>

@@ -1,3 +1,0 @@
-# Calci
-
-Just A Calculator

@@ -30,6 +30,7 @@ const darkStyles = StyleSheet.create({
     alignItems: "flex-end",
     flex: 1,
     justifyContent: "flex-end",
+    marginBottom: 50,
   },
   inputText: {
     color: colors.light.text,
