@@ -1,9 +1,10 @@
 import MainLayout from "/lib/mainLayout.js";
+import { Box } from "@chakra-ui/react";
 
 const About = () => {
   return (
     <MainLayout>
-      <div>About</div>
+      <Box>About</Box>
     </MainLayout>
   );
 };
