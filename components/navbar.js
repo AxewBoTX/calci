@@ -1,11 +1,34 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
+import ThemeButton from "./themeButton.js";
 
 const SmallNavbar = () => {
   return <Box>SmallNavbar</Box>;
 };
 const BigNavbar = () => {
-  return <Box>BigNavbar</Box>;
+  return (
+    <Box
+      display="flex"
+      alignItems="center"
+      justifyContent="space-between"
+      mt="10px"
+    >
+      <Box fontSize="35px" ml="20px" flex="2">
+        Calci
+      </Box>
+      <Box
+        display="flex"
+        mr="20px"
+        alignItems="center"
+        justifyContent="center"
+        gap="20px"
+      >
+        <Button colorScheme="blue">Download</Button>
+        <Button>About</Button>
+        <ThemeButton />
+      </Box>
+    </Box>
+  );
 };
 
 const Navbar = () => {
