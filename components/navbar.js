@@ -1,4 +1,4 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, useColorModeValue } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import ThemeButton from "./themeButton.js";
 
@@ -23,8 +23,18 @@ const BigNavbar = () => {
         justifyContent="center"
         gap="20px"
       >
-        <Button colorScheme="blue">Download</Button>
-        <Button>About</Button>
+        <Button
+          colorScheme="red"
+          border={useColorModeValue("2px solid black", "2px solid white")}
+        >
+          Download
+        </Button>
+        <Button
+          colorScheme="red"
+          border={useColorModeValue("2px solid black", "2px solid white")}
+        >
+          About
+        </Button>
         <ThemeButton />
       </Box>
     </Box>
