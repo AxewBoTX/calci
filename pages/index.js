@@ -1,10 +1,13 @@
 import MainLayout from "/lib/mainLayout.js";
-import { Box } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
+import IntroHeading from "/components/introHeading.js";
 
 export default function Home() {
   return (
     <MainLayout>
-      <Box>Calci Website</Box>
+      <Container mt="140px">
+        <IntroHeading />
+      </Container>
     </MainLayout>
   );
 }

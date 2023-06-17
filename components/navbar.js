@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Container,
   useColorModeValue,
   Menu,
   IconButton,
@@ -15,8 +16,13 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 
 const SmallNavbar = () => {
   return (
-    <Box display="flex" alignItems="center" justifyContent="space-between">
-      <Box fontSize="35px" ml="20px" flex="2" as={Link} href="/">
+    <Box
+      display="flex"
+      alignItems="center"
+      justifyContent="space-between"
+      mt="10px"
+    >
+      <Box fontSize="35px" ml="20px" as={Link} href="/">
         Calci
       </Box>
       <Box
@@ -55,7 +61,7 @@ const BigNavbar = () => {
       justifyContent="space-between"
       mt="10px"
     >
-      <Box fontSize="35px" ml="20px" flex="2" as={Link} href="/">
+      <Box fontSize="35px" ml="20px" as={Link} href="/">
         Calci
       </Box>
       <Box
@@ -97,7 +103,19 @@ const Navbar = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  return <Box>{width >= 800 ? <BigNavbar /> : <SmallNavbar />}</Box>;
+  return (
+    <Container
+      maxW="1280px"
+      position="fixed"
+      left="0"
+      right="0"
+      top="0"
+      style={{ backdropFilter: "blur(20px)" }}
+      zIndex={1}
+    >
+      {width >= 800 ? <BigNavbar /> : <SmallNavbar />}
+    </Container>
+  );
 };
 
 export default Navbar;
