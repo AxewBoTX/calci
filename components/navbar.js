@@ -1,9 +1,51 @@
-import { Box, Button, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  useColorModeValue,
+  Menu,
+  IconButton,
+  MenuButton,
+  MenuList,
+  MenuItem,
+} from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import ThemeButton from "./themeButton.js";
+import Link from "next/link";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
 const SmallNavbar = () => {
-  return <Box>SmallNavbar</Box>;
+  return (
+    <Box display="flex" alignItems="center" justifyContent="space-between">
+      <Box fontSize="35px" ml="20px" flex="2" as={Link} href="/">
+        Calci
+      </Box>
+      <Box
+        mr="20px"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        gap="10px"
+      >
+        <ThemeButton />
+        <Menu>
+          <MenuButton
+            as={IconButton}
+            icon={<HamburgerIcon />}
+            colorScheme="red"
+            border={useColorModeValue("2px solid black", "2px solid white")}
+          />
+          <MenuList>
+            <MenuItem as={Link} href="/">
+              Home
+            </MenuItem>
+            <MenuItem as={Link} href="/about">
+              About
+            </MenuItem>
+          </MenuList>
+        </Menu>
+      </Box>
+    </Box>
+  );
 };
 const BigNavbar = () => {
   return (
@@ -13,7 +55,7 @@ const BigNavbar = () => {
       justifyContent="space-between"
       mt="10px"
     >
-      <Box fontSize="35px" ml="20px" flex="2">
+      <Box fontSize="35px" ml="20px" flex="2" as={Link} href="/">
         Calci
       </Box>
       <Box
@@ -32,6 +74,8 @@ const BigNavbar = () => {
         <Button
           colorScheme="red"
           border={useColorModeValue("2px solid black", "2px solid white")}
+          as={Link}
+          href="/about"
         >
           About
         </Button>
