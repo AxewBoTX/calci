@@ -19,7 +19,7 @@ const About = () => {
   return (
     <MainLayout>
       <Box
-        mt="150px"
+        mt="140px"
         width="100%"
         display="flex"
         flexDirection="column"
