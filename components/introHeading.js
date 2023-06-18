@@ -1,4 +1,5 @@
-import { Flex, Box, Image, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Box, useColorModeValue } from "@chakra-ui/react";
+import Image from "next/image";
 
 const IntroHeading = () => {
   return (
@@ -8,7 +9,12 @@ const IntroHeading = () => {
         borderRadius="50%"
         border={useColorModeValue("2px solid black", "2px solid white")}
       >
-        <Image src="/logo.png" alt="Calci Logo" width="150px" />
+        <Image
+          src="/../public/logo.png"
+          alt="Calci Logo"
+          width="150"
+          height="150"
+        />
       </Box>
       <Box>
         <Box fontSize="55px" lineHeight="50px">
