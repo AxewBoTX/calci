@@ -1,7 +1,11 @@
 import { Box, Flex } from "@chakra-ui/react";
 
 const Screenshots = () => {
-  return <Box></Box>;
+  return (
+    <Flex bgColor="red">
+      <Box></Box>
+    </Flex>
+  );
 };
 
 export default Screenshots;
