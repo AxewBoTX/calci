@@ -9,7 +9,10 @@ export default function Home() {
       <Container mt="140px">
         <IntroHeading />
         <Box>
-          <Text>Here goes something</Text>
+          <Text>Calci is amazing.</Text>
+          <Text>Calci is smart.</Text>
+          <Text>Calci is good.</Text>
+          <Text>Calci is cool.</Text>
         </Box>
         <Screenshots />
       </Container>

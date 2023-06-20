@@ -1,4 +1,4 @@
-import { Box, Flex, Image, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, useColorModeValue } from "@chakra-ui/react";
 
 const Screenshots = () => {
   return (
