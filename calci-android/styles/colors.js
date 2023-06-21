@@ -1,6 +1,6 @@
 const colors = {
   dark: {
-    main: "#000",
+    main: "#000000",
     text: "#fff",
     buttonFg: "#000",
     themeButtonBg: "#FFEEBB",
@@ -9,7 +9,7 @@ const colors = {
     numberBg: "#FFD3B0",
   },
   light: {
-    main: "#fff",
+    main: "#f5f5f5",
     text: "#000",
     buttonFg: "#fff",
     themeButtonBg: "#393646",

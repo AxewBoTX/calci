@@ -1,5 +1,5 @@
 import MainLayout from "/lib/mainLayout.js";
-import { Container, Box, Text } from "@chakra-ui/react";
+import { Container, Box, Text, useColorModeValue } from "@chakra-ui/react";
 import IntroHeading from "/components/introHeading.js";
 import Screenshots from "/components/screenshots.js";
 import { useState, useEffect } from "react";
@@ -75,6 +75,29 @@ const SmallHome = () => {
           <Text>😎</Text>
         </Box>
       </Container>
+      {useColorModeValue(
+        <Box
+          mt="50px"
+          fontSize="22px"
+          display="flex"
+          alignItems="center"
+          justifyContent="space-evenly"
+        >
+          <Text>Calci looks good in dark.</Text>
+          <Text>🌚</Text>
+        </Box>,
+        <Box
+          mt="50px"
+          fontSize="22px"
+          display="flex"
+          alignItems="center"
+          justifyContent="space-evenly"
+        >
+          <Text> Calci looks good in light.</Text>
+          <Text>🌞</Text>
+        </Box>
+      )}
+      <Screenshots />
     </Box>
   );
 };
