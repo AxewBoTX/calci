@@ -111,6 +111,7 @@ const SmallHome = () => {
         flexDirection="column"
         alignItems="center"
         gap="10px"
+        mb="80px"
       >
         <Text>Download Calci Now❗</Text>
         <Button
