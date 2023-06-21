@@ -1,5 +1,11 @@
 import MainLayout from "/lib/mainLayout.js";
-import { Container, Box, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Button,
+  Container,
+  Box,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import IntroHeading from "/components/introHeading.js";
 import Screenshots from "/components/screenshots.js";
 import { useState, useEffect } from "react";
@@ -83,8 +89,8 @@ const SmallHome = () => {
           alignItems="center"
           justifyContent="space-evenly"
         >
-          <Text>Calci looks good in dark.</Text>
-          <Text>🌚</Text>
+          <Text> Calci looks good in light.</Text>
+          <Text>🌞</Text>
         </Box>,
         <Box
           mt="50px"
@@ -93,11 +99,27 @@ const SmallHome = () => {
           alignItems="center"
           justifyContent="space-evenly"
         >
-          <Text> Calci looks good in light.</Text>
-          <Text>🌞</Text>
+          <Text>Calci looks good in dark.</Text>
+          <Text>🌚</Text>
         </Box>
       )}
       <Screenshots />
+      <Box
+        mt="60px"
+        fontSize="22px"
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        gap="10px"
+      >
+        <Text>Download Calci Now❗</Text>
+        <Button
+          colorScheme="red"
+          border={useColorModeValue("2px solid black", "2px solid white")}
+        >
+          Download Now
+        </Button>
+      </Box>
     </Box>
   );
 };

@@ -14,6 +14,44 @@ import ThemeButton from "./themeButton.js";
 import Link from "next/link";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
+const BigNavbar = () => {
+  return (
+    <Box
+      display="flex"
+      alignItems="center"
+      justifyContent="space-between"
+      mt="10px"
+    >
+      <Box fontSize="35px" ml="20px" as={Link} href="/">
+        Calci
+      </Box>
+      <Box
+        display="flex"
+        mr="20px"
+        alignItems="center"
+        justifyContent="center"
+        gap="20px"
+      >
+        <Button
+          colorScheme="red"
+          border={useColorModeValue("2px solid black", "2px solid white")}
+        >
+          Download
+        </Button>
+        <Button
+          colorScheme="red"
+          border={useColorModeValue("2px solid black", "2px solid white")}
+          as={Link}
+          href="/about"
+        >
+          About
+        </Button>
+        <ThemeButton />
+      </Box>
+    </Box>
+  );
+};
+
 const SmallNavbar = () => {
   return (
     <Box
@@ -49,43 +87,6 @@ const SmallNavbar = () => {
             </MenuItem>
           </MenuList>
         </Menu>
-      </Box>
-    </Box>
-  );
-};
-const BigNavbar = () => {
-  return (
-    <Box
-      display="flex"
-      alignItems="center"
-      justifyContent="space-between"
-      mt="10px"
-    >
-      <Box fontSize="35px" ml="20px" as={Link} href="/">
-        Calci
-      </Box>
-      <Box
-        display="flex"
-        mr="20px"
-        alignItems="center"
-        justifyContent="center"
-        gap="20px"
-      >
-        <Button
-          colorScheme="red"
-          border={useColorModeValue("2px solid black", "2px solid white")}
-        >
-          Download
-        </Button>
-        <Button
-          colorScheme="red"
-          border={useColorModeValue("2px solid black", "2px solid white")}
-          as={Link}
-          href="/about"
-        >
-          About
-        </Button>
-        <ThemeButton />
       </Box>
     </Box>
   );
