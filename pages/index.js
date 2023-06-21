@@ -41,6 +41,22 @@ const SmallHome = () => {
         maxW="600px"
       >
         <Box
+          fontSize="22px"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          gap="10px"
+          mb="50px"
+        >
+          <Text>Download Calci Now❗</Text>
+          <Button
+            colorScheme="red"
+            border={useColorModeValue("2px solid black", "2px solid white")}
+          >
+            Download Now
+          </Button>
+        </Box>
+        <Box
           display="flex"
           width="50%"
           minW="250px"
@@ -108,23 +124,6 @@ const SmallHome = () => {
         )}
       </Box>
       <Screenshots />
-      <Box
-        mt="60px"
-        fontSize="22px"
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        gap="10px"
-        mb="80px"
-      >
-        <Text>Download Calci Now❗</Text>
-        <Button
-          colorScheme="red"
-          border={useColorModeValue("2px solid black", "2px solid white")}
-        >
-          Download Now
-        </Button>
-      </Box>
     </Box>
   );
 };

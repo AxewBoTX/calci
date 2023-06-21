@@ -2,7 +2,13 @@ import { Box, Image, useColorModeValue } from "@chakra-ui/react";
 
 const Screenshots = () => {
   return (
-    <Box mt="20px" display="flex" alignItems="center" justifyContent="center">
+    <Box
+      mt="20px"
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      mb="80px"
+    >
       {useColorModeValue(
         <Image
           alt="Screenshot Light"
