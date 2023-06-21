@@ -11,20 +11,7 @@ import Screenshots from "/components/screenshots.js";
 import { useState, useEffect } from "react";
 
 const BigHome = () => {
-  return (
-    <Box>
-      <Box display="flex" alignItems="center" justifyContent="space-around">
-        <IntroHeading />
-        <Screenshots />
-      </Box>
-      <Box>
-        <Text>Calci is amazing.</Text>
-        <Text>Calci is smart.</Text>
-        <Text>Calci is good.</Text>
-        <Text>Calci is cool.</Text>
-      </Box>
-    </Box>
-  );
+  return <Box></Box>;
 };
 
 const SmallHome = () => {
@@ -47,6 +34,7 @@ const SmallHome = () => {
           alignItems="center"
           gap="10px"
           mb="50px"
+          minW="240px"
         >
           <Text>Download Calci Now❗</Text>
           <Button
