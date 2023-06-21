@@ -1,22 +1,7 @@
-import { Box, Flex, Image, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 const Screenshots = () => {
-  return (
-    <Flex direction="column">
-      {useColorModeValue(
-        <Image
-          src="/screenshot-dark.jpg"
-          alt="Dark Screenshot"
-          width="120px"
-        />,
-        <Image
-          src="/screenshot-light.jpg"
-          alt="Light Screenshot"
-          width="120px"
-        />
-      )}
-    </Flex>
-  );
+  return <Box>Screenshots</Box>;
 };
 
 export default Screenshots;

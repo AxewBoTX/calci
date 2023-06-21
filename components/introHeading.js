@@ -14,7 +14,7 @@ const IntroHeading = () => {
         <Box fontSize="55px" lineHeight="50px">
           Calci
         </Box>
-        <Box>Its Just A Calculator</Box>
+        <Box ml="10px">Its Just A Calculator</Box>
       </Box>
     </Flex>
   );
