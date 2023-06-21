@@ -8,7 +8,7 @@ const IntroHeading = () => {
         borderRadius="50%"
         border={useColorModeValue("2px solid black", "2px solid white")}
       >
-        <Image src="/logo.png" alt="Calci Logo" width="150px" height="150px" />
+        <Image src="/logo.png" alt="Calci Logo" width="150px" />
       </Box>
       <Box>
         <Box fontSize="55px" lineHeight="50px">
