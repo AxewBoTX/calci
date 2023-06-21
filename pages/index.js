@@ -81,28 +81,32 @@ const SmallHome = () => {
           <Text>😎</Text>
         </Box>
       </Container>
-      {useColorModeValue(
-        <Box
-          mt="50px"
-          fontSize="22px"
-          display="flex"
-          alignItems="center"
-          justifyContent="space-evenly"
-        >
-          <Text> Calci looks good in light.</Text>
-          <Text>🌞</Text>
-        </Box>,
-        <Box
-          mt="50px"
-          fontSize="22px"
-          display="flex"
-          alignItems="center"
-          justifyContent="space-evenly"
-        >
-          <Text>Calci looks good in dark.</Text>
-          <Text>🌚</Text>
-        </Box>
-      )}
+      <Box display="flex" alignItems="center" justifyContent="center">
+        {useColorModeValue(
+          <Box
+            mt="50px"
+            fontSize="22px"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            gap="30px"
+          >
+            <Text> Calci looks good in light.</Text>
+            <Text>🌞</Text>
+          </Box>,
+          <Box
+            mt="50px"
+            fontSize="22px"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            gap="30px"
+          >
+            <Text>Calci looks good in dark.</Text>
+            <Text>🌚</Text>
+          </Box>
+        )}
+      </Box>
       <Screenshots />
       <Box
         mt="60px"
