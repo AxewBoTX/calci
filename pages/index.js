@@ -1,6 +1,9 @@
 import MainLayout from "/lib/mainLayout.js";
 import {
   Button,
+  Flex,
+  Grid,
+  GridItem,
   Container,
   Box,
   Text,
@@ -11,12 +14,12 @@ import Screenshots from "/components/screenshots.js";
 import { useState, useEffect } from "react";
 
 const BigHome = () => {
-  return <Box></Box>;
+  return <Container maxW="1000px"></Container>;
 };
 
 const SmallHome = () => {
   return (
-    <Box>
+    <Box mt="140px">
       <IntroHeading />
       <Container
         display="flex"
@@ -111,7 +114,9 @@ const SmallHome = () => {
           </Box>
         )}
       </Box>
-      <Screenshots />
+      <Box mt="20px" mb="80px">
+        <Screenshots />
+      </Box>
     </Box>
   );
 };
@@ -130,7 +135,7 @@ export default function Home() {
   }, []);
   return (
     <MainLayout>
-      <Container mt="140px" maxW="100%">
+      <Container maxW="100%">
         {width >= 800 ? <BigHome /> : <SmallHome />}
       </Container>
     </MainLayout>
