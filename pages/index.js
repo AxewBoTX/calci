@@ -2,8 +2,6 @@ import MainLayout from "/lib/mainLayout.js";
 import {
   Button,
   Flex,
-  Grid,
-  GridItem,
   Container,
   Box,
   Text,
@@ -14,7 +12,105 @@ import Screenshots from "/components/screenshots.js";
 import { useState, useEffect } from "react";
 
 const BigHome = () => {
-  return <Container maxW="1000px"></Container>;
+  return (
+    <Container mt="85px" maxW="1000px" display="flex">
+      <Box flex="2.5">
+        <IntroHeading />
+        <Flex direction="column">
+          <Flex
+            direction="column"
+            alignItems="center"
+            mt="30px"
+            gap="20px"
+            fontSize="22px"
+          >
+            <Box
+              display="flex"
+              width="50%"
+              minW="250px"
+              alignItems="center"
+              justifyContent="space-between"
+            >
+              <Text>Calci is amazing.</Text>
+              <Text>🤯</Text>
+            </Box>
+            <Box
+              display="flex"
+              width="50%"
+              minW="250px"
+              alignItems="center"
+              justifyContent="space-between"
+            >
+              <Text>Calci is smart.</Text>
+              <Text>🤓</Text>
+            </Box>
+            <Box
+              display="flex"
+              width="50%"
+              minW="250px"
+              alignItems="center"
+              justifyContent="space-between"
+            >
+              <Text>Calci is good.</Text>
+              <Text>😊</Text>
+            </Box>
+            <Box
+              display="flex"
+              width="50%"
+              minW="250px"
+              alignItems="center"
+              justifyContent="space-between"
+            >
+              <Text>Calci is cool.</Text>
+              <Text>😎</Text>
+            </Box>
+            <Box
+              fontSize="22px"
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              gap="10px"
+              mt="30px"
+              minW="240px"
+            >
+              <Text>Download Calci Now❗</Text>
+              <Button
+                colorScheme="red"
+                border={useColorModeValue("2px solid black", "2px solid white")}
+              >
+                Download Now
+              </Button>
+            </Box>
+          </Flex>
+        </Flex>
+      </Box>
+      <Box flex="1.2">
+        {useColorModeValue(
+          <Box
+            fontSize="20px"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            gap="30px"
+          >
+            <Text> Calci looks good in light.</Text>
+            <Text>🌞</Text>
+          </Box>,
+          <Box
+            fontSize="20px"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            gap="30px"
+          >
+            <Text>Calci looks good in dark.</Text>
+            <Text>🌚</Text>
+          </Box>
+        )}
+        <Screenshots />
+      </Box>
+    </Container>
+  );
 };
 
 const SmallHome = () => {

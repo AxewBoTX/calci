@@ -3,6 +3,7 @@ import {
   Button,
   Container,
   useColorModeValue,
+  Text,
   Menu,
   IconButton,
   MenuButton,
@@ -13,6 +14,7 @@ import { useState, useEffect } from "react";
 import ThemeButton from "./themeButton.js";
 import Link from "next/link";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { FaGithub } from "react-icons/fa";
 
 const BigNavbar = () => {
   return (
@@ -35,8 +37,15 @@ const BigNavbar = () => {
         <Button
           colorScheme="red"
           border={useColorModeValue("2px solid black", "2px solid white")}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          gap="10px"
+          as={Link}
+          href="https://github.com/AxewBoTX/calci"
         >
-          Download
+          <Text>Source</Text>
+          <FaGithub />
         </Button>
         <Button
           colorScheme="red"
