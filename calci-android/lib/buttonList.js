@@ -105,7 +105,7 @@ const ButtonList = [
     },
     {
       text: "=",
-      class: "func",
+      class: "equal",
       func: "Calculate",
     },
   ],

@@ -18,6 +18,14 @@ const darkStyles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "500",
   },
+  equalButton: {
+    alignItems: "center",
+    backgroundColor: colors.dark.equalBg,
+    borderRadius: 50,
+    height: 65,
+    justifyContent: "center",
+    width: 65,
+  },
   funcButton: {
     alignItems: "center",
     backgroundColor: colors.dark.funcBg,

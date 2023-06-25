@@ -69,8 +69,8 @@ const Home = () => {
               name={colorTheme == "dark" ? "sun" : "moon"}
               color={
                 colorTheme == "dark"
-                  ? colors.dark.buttonFg
-                  : colors.light.buttonFg
+                  ? colors.dark.themeButtonFg
+                  : colors.light.themeButtonFg
               }
               size={32}
             />
