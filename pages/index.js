@@ -13,78 +13,88 @@ import { useState, useEffect } from "react";
 
 const BigHome = () => {
   return (
-    <Container mt="85px" maxW="1000px" display="flex">
-      <Box flex="2.5">
-        <IntroHeading />
-        <Flex direction="column">
-          <Flex
-            direction="column"
-            alignItems="center"
-            mt="30px"
-            gap="20px"
-            fontSize="22px"
-          >
-            <Box
-              display="flex"
-              width="50%"
-              minW="250px"
+    <Container mt="100px" maxW="1000px" display="flex">
+      <Box
+        flex="2.5"
+        display="flex"
+        flexDirection="column"
+        alignItems="flex-start"
+      >
+        <Box>
+          <IntroHeading />
+          <Flex direction="column">
+            <Flex
+              direction="column"
               alignItems="center"
-              justifyContent="space-between"
-            >
-              <Text>Calci is amazing.</Text>
-              <Text>🤯</Text>
-            </Box>
-            <Box
-              display="flex"
-              width="50%"
-              minW="250px"
-              alignItems="center"
-              justifyContent="space-between"
-            >
-              <Text>Calci is smart.</Text>
-              <Text>🤓</Text>
-            </Box>
-            <Box
-              display="flex"
-              width="50%"
-              minW="250px"
-              alignItems="center"
-              justifyContent="space-between"
-            >
-              <Text>Calci is good.</Text>
-              <Text>😊</Text>
-            </Box>
-            <Box
-              display="flex"
-              width="50%"
-              minW="250px"
-              alignItems="center"
-              justifyContent="space-between"
-            >
-              <Text>Calci is cool.</Text>
-              <Text>😎</Text>
-            </Box>
-            <Box
-              fontSize="22px"
-              display="flex"
-              flexDirection="column"
-              alignItems="center"
-              gap="10px"
               mt="30px"
-              minW="240px"
+              gap="20px"
+              fontSize="22px"
             >
-              <Text>Download Calci Now❗</Text>
-              <Button
-                colorScheme="red"
-                border={useColorModeValue("2px solid black", "2px solid white")}
+              <Box
+                display="flex"
+                width="50%"
+                minW="250px"
+                alignItems="center"
+                justifyContent="space-between"
               >
-                Download Now
-              </Button>
-            </Box>
+                <Text>Calci is amazing.</Text>
+                <Text>🤯</Text>
+              </Box>
+              <Box
+                display="flex"
+                width="50%"
+                minW="250px"
+                alignItems="center"
+                justifyContent="space-between"
+              >
+                <Text>Calci is smart.</Text>
+                <Text>🤓</Text>
+              </Box>
+              <Box
+                display="flex"
+                width="50%"
+                minW="250px"
+                alignItems="center"
+                justifyContent="space-between"
+              >
+                <Text>Calci is good.</Text>
+                <Text>😊</Text>
+              </Box>
+              <Box
+                display="flex"
+                width="50%"
+                minW="250px"
+                alignItems="center"
+                justifyContent="space-between"
+              >
+                <Text>Calci is cool.</Text>
+                <Text>😎</Text>
+              </Box>
+              <Box
+                fontSize="22px"
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                gap="10px"
+                mt="30px"
+                minW="240px"
+              >
+                <Text>Download Calci Now❗</Text>
+                <Button
+                  colorScheme="red"
+                  border={useColorModeValue(
+                    "2px solid black",
+                    "2px solid white"
+                  )}
+                >
+                  Download Now
+                </Button>
+              </Box>
+            </Flex>
           </Flex>
-        </Flex>
+        </Box>
       </Box>
-      <Box flex="1.2">
+      <Box flex="1.5">
         {useColorModeValue(
           <Box
             fontSize="20px"
