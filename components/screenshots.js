@@ -6,14 +6,14 @@ const Screenshots = () => {
       {useColorModeValue(
         <Image
           alt="Screenshot Light"
-          src="/screenshot-light.jpg"
+          src="/screenshot-light.png"
           width="280px"
           borderRadius="15px"
           border="2px solid black"
         />,
         <Image
           alt="Screenshot Dark"
-          src="/screenshot-dark.jpg"
+          src="/screenshot-dark.png"
           width="280px"
           borderRadius="15px"
           border="2px solid white"
