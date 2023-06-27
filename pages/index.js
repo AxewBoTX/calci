@@ -11,6 +11,11 @@ import IntroHeading from "/components/introHeading.js";
 import Screenshots from "/components/screenshots.js";
 import { useState, useEffect } from "react";
 
+const handleDownload = () => {
+  window.location.href =
+    "https://github.com/AxewBoTX/calci/releases/latest/download/Calci.apk";
+};
+
 const BigHome = () => {
   return (
     <Container mt="100px" maxW="1000px" display="flex">
@@ -81,6 +86,7 @@ const BigHome = () => {
               >
                 <Text>Download Calci Now❗</Text>
                 <Button
+                  onClick={handleDownload}
                   colorScheme="red"
                   border={useColorModeValue(
                     "2px solid black",
@@ -147,6 +153,7 @@ const SmallHome = () => {
         >
           <Text>Download Calci Now❗</Text>
           <Button
+            onClick={handleDownload}
             colorScheme="red"
             border={useColorModeValue("2px solid black", "2px solid white")}
           >
